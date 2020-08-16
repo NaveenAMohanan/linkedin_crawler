@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 # from json_wr import read_status_json,write_status
 # from  import write_status,read_status_json
-from crawler.linkedin_final.json_wr import read_status_json, write_status
+from linkedin_crawler.json_wr  import read_status_json, write_status
 
 driver_folder = os.path.join(os.getcwd(), "geckodriver-v0.24.0-win64")
 DRIVER = os.path.join(driver_folder, 'geckodriver.exe')
