@@ -142,3 +142,20 @@ if __name__ == '__main__':
     driver.get('https://www.linkedin.com/')
     choice(driver)
     print("extited the program logout and close ")
+
+"""
+LIMITS : 
+1) Invitations / connection requests —100 / day
+2) Messages to 1st connections — 150 / day
+3) Messages to group members — 15 / month per all LinkedIn groups
+4) Endorsements — 60 /day
+5) Profile Extractor — 150 / day
+6) Profile Auto-Visiting —150 / day
+7) Profile Auto-Follower — 150 / day
+8) Collect from search (for inviting, messaging, exports or auto-visiting) — 2000 contacts / day
+
+SPLIT : 
+Monday : 100 invites
+Tuesday : 150 messages
+Wednesday : 60 endorsements
+"""
