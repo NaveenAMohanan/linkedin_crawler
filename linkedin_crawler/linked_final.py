@@ -143,6 +143,7 @@ if __name__ == '__main__':
     choice(driver)
     print("extited the program logout and close ")
 
+# Currently sort by laste name
 """
 LIMITS : 
 1) Invitations / connection requests —100 / day
