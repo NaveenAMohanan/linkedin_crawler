@@ -130,10 +130,47 @@ def choice(driver):
                 print(e )
         elif choice == 4:
             print("send connection ")
+            try:
+                send_connection_request(driver)
+            except Exception as e:
+                print(e )
         else:
             print("enter a valid option ")
 
-def ex():
+def scrool_page_end_seeall():
+    t = 0
+    while t<9:
+        try:
+            print("scrooling down ")
+            from selenium.webdriver.common.keys import Keys
+            html = driver.find_element_by_tag_name('html')
+            html.send_keys(Keys.END)
+            time.sleep(4)
+            t += 1
+
+        except Exception as e:
+            print("scrooling down exception")
+
+
+def send_connection_request(driver):
+    print("OPEN : https://www.linkedin.com/mynetwork/ select People in the Internet industry you may know and click see all ")
+    to_send = int(input("enter end no to sends "))
+    # to_send = 10
+    time.sleep(5)
+    print("start sending request ")
+    scrool_page_end_seeall()
+    ctr = 0
+    while ctr != to_send:
+        aa = driver.find_element_by_xpath('/html/body/div[4]/div/div/div[2]/ul/li[1]/div/section/div[2]/footer')
+        aa.click()
+        time.sleep(1)
+        cl = driver.find_element_by_xpath("/html/body/div[4]/div/div/div[2]/ul/li[1]/div/section/button/li-icon")
+        cl.click()
+        time.sleep(1)
+        ctr += 1
+        print("sent connection request to : ",ctr)
+
+
     pass
 
 if __name__ == '__main__':
